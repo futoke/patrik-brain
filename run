@@ -1,0 +1,5 @@
+7B model: wget https://huggingface.co/IlyaGusev/saiga2_7b_gguf/resolve/main/model-q4_K.gguf
+
+13B model: wget https://huggingface.co/IlyaGusev/saiga2_13b_gguf/resolve/main/model-q4_K.gguf
+
+docker run --rm -it -p 8000:8000 -v ./models:/models -e MODEL=/models/model-q4_K.gguf ghcr.io/abetlen/llama-cpp-python:latest
